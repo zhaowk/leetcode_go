@@ -6,6 +6,8 @@ import (
 )
 
 func TestNextPermutation(t *testing.T) {
+	nextPermutation([]int{})
+
 	a := []int{1, 1, 5}
 	nextPermutation(a)
 	assert.Equal(t, []int{1, 5, 1}, a)

@@ -13,4 +13,6 @@ func TestRemoveDuplicates(t *testing.T) {
 
 	c := removeDuplicates(a)
 	assert.Equal(t, b, a[:c])
+
+	assert.Equal(t, 0, removeDuplicates([]int{}))
 }

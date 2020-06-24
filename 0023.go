@@ -36,6 +36,4 @@ func mergeKLists(lists []*ListNode) *ListNode {
 		p = p.Next
 		heads[merging] = heads[merging].Next
 	}
-
-	return head.Next
 }

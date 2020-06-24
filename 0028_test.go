@@ -11,4 +11,6 @@ func TestStrStr(t *testing.T) {
 	assert.Equal(t, 0, strStr("123456", ""))
 	assert.Equal(t, -1, strStr("", "13"))
 	assert.Equal(t, -1, strStr("aaaaa", "baa"))
+
+	assert.Equal(t, -1, strStr("aaaaa", "baaaaaaaaa"))
 }

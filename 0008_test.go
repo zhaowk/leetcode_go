@@ -16,6 +16,7 @@ func TestMyAtoi(t *testing.T) {
 
 	assert.Equal(t, 0, myAtoi("  ab123"))
 	assert.Equal(t, 123, myAtoi("  123a"))
+	assert.Equal(t, 123, myAtoi("  +123a"))
 	assert.Equal(t, 0, myAtoi("  "))
 	assert.Equal(t, 0, myAtoi(""))
 }

@@ -11,4 +11,6 @@ func TestRemoveElement(t *testing.T) {
 
 	c := removeElement(a, 3)
 	assert.Equal(t, b, a[:c])
+
+	assert.Equal(t, 0, removeElement([]int{}, 0))
 }

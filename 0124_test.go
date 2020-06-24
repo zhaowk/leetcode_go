@@ -6,6 +6,8 @@ import (
 )
 
 func TestMaxPathSum(t *testing.T) {
+	assert.Equal(t, 0, maxArea(nil))
+
 	a := buildTree(1, 2, 3)
 	assert.Equal(t, 6, maxPathSum(a))
 	assert.Equal(t, 6, maxPathSum2(a))

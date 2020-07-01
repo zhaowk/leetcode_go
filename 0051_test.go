@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func Test(t *testing.T) {
+func TestSolveNQueens(t *testing.T) {
 	assert.Equal(t, [][]string{{"Q"}}, solveNQueens(1))
 	assert.Equal(t, [][]string{}, solveNQueens(2))
 	assert.Equal(t, [][]string{}, solveNQueens(3))

@@ -5,6 +5,6 @@ import (
 	"testing"
 )
 
-func Test1(t *testing.T) {
-	assert.False(t, isPathCrossing("NES"))
+func TestGetRow(t *testing.T) {
+	assert.Equal(t, []int{1, 1}, getRow(1))
 }

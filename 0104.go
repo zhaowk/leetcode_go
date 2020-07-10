@@ -8,10 +8,26 @@ package leetcode_go
  *     Right *TreeNode
  * }
  */
+
+var mxDepthResult int
+
 func maxDepth(root *TreeNode) int {
-	return 0
+	mxDepthResult = 0
+	depth(root, 0)
+	return mxDepthResult
 }
 
-func maxDepthTree(root *TreeNode, depth int) {
-
+func depth(root *TreeNode, dep int) {
+	if root != nil {
+		mxDepthResult = max(mxDepthResult, dep+1)
+		depth(root.Left, dep+1)
+		depth(root.Right, dep+1)
+	}
 }
+
+//func max(x, y int) int {
+//	if x < y {
+//		return y
+//	}
+//	return x
+//}

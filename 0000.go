@@ -2,6 +2,7 @@ package leetcode_go
 
 import (
 	"bytes"
+	"math"
 	"reflect"
 	"strconv"
 )
@@ -150,11 +151,28 @@ func buildTree(nodes ...interface{}) (root *TreeNode) {
 }
 
 /**
+ * 带精度浮点数比较
+ * a, b 待比较的值
+ * c 精度
+ */
+func floatEq(a, b, c float64) bool {
+	return c > math.Abs(a-b)
+}
+
+func floatEqN5(a, b float64) bool {
+	return floatEq(a, b, 1e-5)
+}
+
+func floatEqN6(a, b float64) bool {
+	return floatEq(a, b, 1e-6)
+}
+
+/**
  * Definition for a Node.
  */
-type Node struct {
-	Val   int
-	Left  *Node
-	Right *Node
-	Next  *Node
-}
+//type Node struct {
+//	Val   int
+//	Left  *Node
+//	Right *Node
+//	Next  *Node
+//}

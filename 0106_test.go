@@ -1,11 +1,11 @@
 package leetcode_go
 
 import (
-	"fmt"
+	"github.com/stretchr/testify/assert"
 	"testing"
 )
 
 func TestBuildTreeIP(t *testing.T) {
-	fmt.Println(buildTreeIP([]int{1, 2}, []int{2, 1}))
-	fmt.Println(buildTreeIP([]int{9, 3, 15, 20, 7}, []int{9, 15, 7, 20, 3}))
+	assert.Equal(t, buildTree(1, nil, 2), buildTreeIP([]int{1, 2}, []int{2, 1}))
+	assert.Equal(t, buildTree(3, 9, 20, nil, nil, 15, 7), buildTreeIP([]int{9, 3, 15, 20, 7}, []int{9, 15, 7, 20, 3}))
 }

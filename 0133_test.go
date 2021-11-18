@@ -67,5 +67,4 @@ func TestCloneGraph(t *testing.T) {
 	fmt.Println(buildNode([][]int{
 		{2, 4}, {1, 3}, {2, 4}, {1, 3},
 	}))
-
 }

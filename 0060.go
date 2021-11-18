@@ -11,7 +11,7 @@ func getPermutation(n int, k int) string {
 
 	r := ""
 	for i := 0; i < n; i++ {
-		r += string(nums[i] + '0')
+		r += string(rune(nums[i] + '0'))
 	}
 
 	return r

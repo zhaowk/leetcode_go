@@ -34,7 +34,7 @@ func match(s string, ps []string) bool {
 		}
 		var j int
 		if pattern[0] >= 'A' && pattern[0] <= 'Z' { // 大写字母开头
-			for ; s[i] >= 'a' && s[i] <= 'z'; i++ { // 跳过多余的小写字母
+			for ; i < len(s) && s[i] >= 'a' && s[i] <= 'z'; i++ { // 跳过多余的小写字母
 			}
 			if i >= len(s) || s[i] != pattern[0] { // 匹配大写字母
 				return false
